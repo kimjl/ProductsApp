@@ -3,8 +3,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// initialize our express app
-const app = express();
+const product = require('./routes/product.route'); // Imports routes from products
+const app = express(); // initialize our express app
+
+app.use('/products', product);
 
 let port = 1234;
 

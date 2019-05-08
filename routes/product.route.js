@@ -8,11 +8,12 @@ const product_controller = require('../controllers/product.controller');
 router.get('/test', product_controller.test);
 
 // routes for create, id, update
-router.get('/create', product_controller.product_create);
+router.post('/create', product_controller.product_create);
 
 router.get('/:id', product_controller.product_details);
 
-router.get('/:id/update', product_controller.product_update);
+router.put('/:id/update', product_controller.product_update);
 
+router.delete('/:id/delete', product_controller.product_delete);
 
 module.exports = router;

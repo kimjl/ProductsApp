@@ -13,7 +13,6 @@ exports.product_create = (req, res, next) => {
       price: req.body.price
     }
   );
-
   product.save((err) => {
     if (err) {
       return next(err);
